@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 /**************************************
 
 Template Name: Akkhor 
@@ -1346,7 +1345,7 @@ h6 {
   display: none;
 }
 #preloader {
-  background: #ffffff url('/img/preloader.gif') no-repeat scroll center center;
+  background: #ffffff url('../img/preloader.gif') no-repeat scroll center center;
   height: 100%;
   left: 0;
   overflow: visible;
@@ -3376,7 +3375,7 @@ ul {
 }
 /*=============== 6.6 Login Page ==================*/
 .login-page-wrap {
-  background-image: url('/img/figure/login-bg.jpg');
+  background-image: url('../img/figure/login-bg.jpg');
   background-repeat: no-repeat;
   background-position: top;
   position: fixed;
