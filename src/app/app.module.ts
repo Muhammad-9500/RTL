@@ -44,6 +44,11 @@ import { StudentAttendanceComponent } from './student-attendance/student-attenda
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { UiTabComponent } from './ui-tab/ui-tab.component';
 import { UiWidgetComponent } from './ui-widget/ui-widget.component';
+import { DashboardContentComponent } from './dashboard-content/dashboard-content.component';
+import { DashboardSummaryComponent } from './dashboard-summary/dashboard-summary.component';
+import { FooterComponent } from './footer/footer.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +92,12 @@ import { UiWidgetComponent } from './ui-widget/ui-widget.component';
     StudentAttendanceComponent,
     StudentDetailsComponent,
     UiTabComponent,
-    UiWidgetComponent
+    UiWidgetComponent,
+    DashboardContentComponent,
+    DashboardSummaryComponent,
+    FooterComponent,
+    SidebarComponent,
+    HeaderMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -132,6 +142,8 @@ import { UiWidgetComponent } from './ui-widget/ui-widget.component';
        {path: 'student-details', component: StudentDetailsComponent},
        {path: 'ui-tab', component: UiTabComponent},
        {path: 'ui-widget', component: UiWidgetComponent},
+       {path: 'teacher-payment', component: TeacherPaymentComponent},
+       {path: 'transport', component: TransportComponent},
       
       ]),
   ],
