@@ -4,7 +4,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { Home3Component } from './home3/home3.component';
 import { Home4Component } from './home4/home4.component';
@@ -49,6 +49,52 @@ import { DashboardSummaryComponent } from './dashboard-summary/dashboard-summary
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
+
+const routes : Routes = [
+  
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'home3', component: Home3Component },
+  { path: 'home4', component: Home4Component },
+  { path: 'home5', component: Home5Component },
+  { path: 'all-student', component: AllStudentComponent },
+  { path: 'student-promotion', component: StudentPromotionComponent },
+  { path: 'all-teacher', component: AllTeacherComponent },
+  { path: 'teacher-details', component: TeacherDetailsComponent },
+  { path: 'add-parent', component: AddParentComponent },
+  { path: 'all-book', component: AllBookComponent },
+  { path: 'add-book', component: AddBookComponent },
+  { path: 'add-class', component: AddClassComponent },
+  { path: 'all-subject', component: AllSubjectComponent },
+  { path: 'class-routine', component: ClassRoutineComponent },
+  { path: 'exam-schedule', component: ExamScheduleComponent },
+  { path: 'exam-grade', component: ExamGradeComponent },
+  { path: 'transport', component: TransportComponent },
+  { path: 'account-settings', component: AccountSettingsComponent },
+  { path: 'add-expense', component: AddExpenseComponent },
+  { path: 'add-teacher', component: AddTeacherComponent },
+  { path: 'admit-form', component: AdmitFormComponent },
+  { path: 'all-class', component: AllClassComponent },
+  {path: 'all-fees', component: AllFeesComponent},
+  {path: 'all-parents', component: AllParentsComponent},
+  {path: 'button', component: ButtonComponent},
+  {path: 'grid', component: GridComponent},
+  {path: 'hostel', component: HostelComponent},
+  {path: 'map', component: MapComponent},
+  {path: 'messaging', component: MessagingComponent},
+  {path: 'modal', component: ModalComponent},// I'm gonna open from here
+  {path: 'notice-board', component: NoticeBoardComponent},
+  {path: 'notification-alert', component: NotificationAlertComponent},
+  {path: 'parent-details', component: ParentDetailsComponent},
+  {path: 'progressbar', component: ProgressbarComponent},
+  {path: 'student-attendance', component: StudentAttendanceComponent},
+  {path: 'student-details', component: StudentDetailsComponent},
+  {path: 'ui-tab', component: UiTabComponent},
+  {path: 'ui-widget', component: UiWidgetComponent},
+  {path: 'teacher-payment', component: TeacherPaymentComponent},
+  {path: 'transport', component: TransportComponent},
+ 
+];
 
 @NgModule({
   declarations: [
@@ -102,50 +148,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-       { path: 'login', component: LoginComponent },
-       { path: 'home3', component: Home3Component },
-       { path: 'home4', component: Home4Component },
-       { path: 'home5', component: Home5Component },
-       { path: 'all-student', component: AllStudentComponent },
-       { path: 'student-promotion', component: StudentPromotionComponent },
-       { path: 'all-teacher', component: AllTeacherComponent },
-       { path: 'teacher-details', component: TeacherDetailsComponent },
-       { path: 'add-parent', component: AddParentComponent },
-       { path: 'all-book', component: AllBookComponent },
-       { path: 'add-book', component: AddBookComponent },
-       { path: 'add-class', component: AddClassComponent },
-       { path: 'all-subject', component: AllSubjectComponent },
-       { path: 'class-routine', component: ClassRoutineComponent },
-       { path: 'exam-schedule', component: ExamScheduleComponent },
-       { path: 'exam-grade', component: ExamGradeComponent },
-       { path: 'transport', component: TransportComponent },
-       { path: 'account-settings', component: AccountSettingsComponent },
-       { path: 'add-expense', component: AddExpenseComponent },
-       { path: 'add-teacher', component: AddTeacherComponent },
-       { path: 'admit-form', component: AdmitFormComponent },
-       { path: 'all-class', component: AllClassComponent },
-       {path: 'all-fees', component: AllFeesComponent},
-       {path: 'all-parents', component: AllParentsComponent},
-       {path: 'button', component: ButtonComponent},
-       {path: 'grid', component: GridComponent},
-       {path: 'hostel', component: HostelComponent},
-       {path: 'map', component: MapComponent},
-       {path: 'messaging', component: MessagingComponent},
-       {path: 'modal', component: ModalComponent},// I'm gonna open from here
-       {path: 'notice-board', component: NoticeBoardComponent},
-       {path: 'notification-alert', component: NotificationAlertComponent},
-       {path: 'parent-details', component: ParentDetailsComponent},
-       {path: 'progressbar', component: ProgressbarComponent},
-       {path: 'student-attendance', component: StudentAttendanceComponent},
-       {path: 'student-details', component: StudentDetailsComponent},
-       {path: 'ui-tab', component: UiTabComponent},
-       {path: 'ui-widget', component: UiWidgetComponent},
-       {path: 'teacher-payment', component: TeacherPaymentComponent},
-       {path: 'transport', component: TransportComponent},
-      
-      ]),
+    RouterModule.forRoot(routes),
   ],
   providers: [
     provideClientHydration()

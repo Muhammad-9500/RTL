@@ -1,6 +1,7 @@
 <!-- Preloader Start Here -->
 <div id="preloader"></div>
 <!-- Preloader End Here -->
+<router-outlet></router-outlet>
 <div id="wrapper" class="wrapper bg-ash">
     <!-- Header Menu Area Start Here -->
     <app-header-menu></app-header-menu>
@@ -222,8 +223,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="table-responsive result-table-box">
-                                            <table class="table display data-table text-nowrap">
+                                        <div class="table-responsive result-table-box" skipHydration>
+                                            <table class="table display data-table text-nowrap" skipHydration>
                                                 <thead>
                                                     <tr>
                                                         <th>
